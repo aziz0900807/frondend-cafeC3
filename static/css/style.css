@@ -1,0 +1,1279 @@
+@import "https://fonts.googleapis.com/css2?family=Caveat&family=Hammersmith+One&family=Playfair+Display&family=Source+Serif+4:opsz@8..60&display=swap";
+:root {
+--text:#fff;
+--price:#1f9503;
+--primary-menu:#CB4E19;
+--primary-bar:#6100FF;
+--background:#1d1d1d;
+--background-darkness:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6))
+}
+* {
+margin:0;
+padding:0;
+box-sizing:border-box;
+list-style:none;
+text-decoration:none
+}
+html {
+font-size:10px;
+scroll-behavior:smooth;
+-moz-user-select:-moz-none;
+-o-user-select:none;
+-khtml-user-select:none;
+-webkit-user-select:none;
+user-select:none;
+overflow-x:hidden!important
+}
+body {
+background-color:var(--background);
+overflow-x:hidden;
+overflow-x:hidden!important;
+}
+.preloader {
+position:fixed;
+z-index:9;
+top:0;
+left:0;
+background:var(--background);
+height:100%;
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden
+}
+
+.c-square {
+width:70%;
+height:70%;
+border:7px solid var(--primary-menu);
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column
+}
+
+.c-square_menu {
+font-family:'Playfair Display',serif;
+color:var(--text);
+font-size:96px;
+font-style:normal;
+font-weight:600;
+line-height:normal
+}
+
+.c-square_title {
+color:var(--text);
+font-family:'Caveat',cursive;
+font-size:52px;
+font-style:normal;
+font-weight:400;
+line-height:normal
+}
+
+.l-circle {
+position:absolute;
+left:0;
+top:0;
+width:10rem;
+height:20rem;
+background-color:var(--primary-menu);
+border-radius:0 10rem 10rem 0;
+animation:MoveUpDown2 2.5s linear infinite
+}
+
+.r-circle {
+position:absolute;
+right:0;
+bottom:0;
+width:10rem;
+height:20rem;
+background-color:var(--primary-menu);
+border-radius:10rem 0 0 10rem;
+animation:MoveUpDown 2.5s linear infinite
+}
+
+@keyframes MoveUpDown {
+0%,100% {
+bottom:0
+}
+
+50% {
+bottom:calc(100% - 20rem)
+}
+}
+
+@keyframes MoveUpDown2 {
+0%,100% {
+top:0
+}
+
+50% {
+top:calc(100% - 20rem)
+}
+}
+
+.disappear {
+animation:vanish 1s forwards
+}
+
+@keyframes vanish {
+100% {
+opacity:0;
+visibility:hidden
+}
+}
+
+.header {
+height:100vh;
+border-radius:0 0 10px 10px;
+background-position:center;
+background-repeat:no-repeat;
+background-size:cover;
+display:flex;
+align-items:center
+}
+
+.meal-menu {
+background-image:var(--background-darkness),url(../img/header_img-min.webp)
+}
+
+.header-bar_menu {
+background-image:var(--background-darkness),url(../img/bar-img-min.webp);
+display:flex;
+align-items:center;
+justify-content:center
+}
+
+.header-bar_menu .header_wrapper {
+justify-content:center
+}
+
+.header_wrapper {
+width:50%;
+height:100%;
+display:flex;
+justify-content:end;
+align-items:center
+}
+
+.header_logo {
+width:442px;
+height:327px;
+display:flex;
+flex-direction:column;
+justify-content:space-around;
+align-items:center
+}
+
+.header_logo img {
+width:59%;
+height:129px
+}
+
+.header_logo h2 {
+color:var(--text);
+font-family:'Hammersmith One',sans-serif;
+font-size:5rem;
+font-weight:400
+}
+
+.header_logo h1 {
+color:var(--text);
+font-size:90px;
+font-weight:600;
+font-family:'Source Serif 4',serif
+}
+
+.btn-box {
+margin:auto;
+margin-top:78px;
+width:55%;
+display:flex;
+justify-content:space-around
+}
+
+.btn {
+width:35%;
+height:78px;
+color:var(--text);
+background-color:var(--background);
+font-family:'Caveat',cursive;
+font-size:6em;
+font-style:normal;
+line-height:normal;
+cursor:pointer;
+border-radius:10px;
+font-weight:400;
+display:flex;
+justify-content:center;
+align-items:center
+}
+
+.btn_menu {
+border:3px solid var(--primary-menu)
+}
+
+.btn_bar {
+border:3px solid var(--primary-bar)
+}
+
+.menu-categories {
+margin-top:126px;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+row-gap:80px;
+column-gap:60px
+}
+
+.menu-categories_card {
+width:279px;
+height:310px;
+border:2px solid var(--primary-menu);
+font-family:'Caveat',cursive;
+font-size:70px;
+font-style:normal;
+font-weight:700;
+line-height:94%;
+background-position:center;
+background-repeat:no-repeat;
+background-size:cover;
+border-radius:15px;
+font-weight:400;
+cursor:pointer
+}
+
+.menu-categories_card a {
+width:100%;
+height:100%;
+color:var(--text);
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center
+}
+
+.bar-categories_card a {
+width:100%;
+height:100%;
+color:var(--text);
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center
+}
+
+.menu-categories_card:nth-child(1) {
+background-image:var(--background-darkness),url(../img//menu-img/salads-min.webp)
+}
+
+.menu-categories_card:nth-child(2) {
+background-image:var(--background-darkness),url(../img/menu-img/soups-min.webp)
+}
+
+.menu-categories_card:nth-child(3) {
+background-image:var(--background-darkness),url(../img/menu-img/second-meal-min.webp)
+}
+
+.menu-categories_card:nth-child(4) {
+background-image:var(--background-darkness),url(../img/menu-img/zakuski-min.webp)
+}
+
+.menu-categories_card:nth-child(5) {
+background-image:var(--background-darkness),url(../img/menu-img/garnires-min.webp)
+}
+
+.menu-categories_card:nth-child(6) {
+background-image:var(--background-darkness),url(../img/menu-img/shashlyks-min.webp)
+}
+
+.menu-categories_card:nth-child(7) {
+background-image:var(--background-darkness),url(../img/menu-img/pizzas-min.webp)
+}
+
+.menu-categories_card:nth-child(8) {
+background-image:var(--background-darkness),url(../img/menu-img/flour-min.webp)
+}
+
+.menu-categories_card:nth-child(9) {
+background-image:var(--background-darkness),url(../img/menu-img/desserts-min.webp)
+}
+
+.menu-categories_card:nth-child(10) {
+background-image:var(--background-darkness),url(../img/menu-img/tea-min.webp)
+}
+
+.menu-categories_card:nth-child(11) {
+background-image:var(--background-darkness),url(../img/menu-img/cold-drinks-min.webp)
+}
+
+.bar-categories {
+margin-top:126px;
+display:none;
+flex-wrap:wrap;
+justify-content:center;
+row-gap:80px;
+column-gap:60px
+}
+
+.bar-categories_card {
+width:279px;
+height:310px;
+border:2px solid #6100FF;
+font-family:'Caveat',cursive;
+color:#f0f8ff;
+font-size:70px;
+font-style:normal;
+line-height:94%;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+background-position:center;
+background-repeat:no-repeat;
+background-size:cover;
+border-radius:15px;
+font-weight:400;
+cursor:pointer
+}
+
+.bar-categories_card p {
+font-size:60px
+}
+
+.bar-categories_card:nth-child(1) {
+background-image:var(--background-darkness),url(../img/bar-img/lemonades-min.webp)
+}
+
+.bar-categories_card:nth-child(2) {
+background-image:var(--background-darkness),url(../img/bar-img/milk-coctaile-min.webp)
+}
+
+.bar-categories_card:nth-child(3) {
+background-image:var(--background-darkness),url(../img/bar-img/wiskey-min.webp)
+}
+
+.bar-categories_card:nth-child(4) {
+background-image:var(--background-darkness),url(../img/bar-img/beer-min.webp)
+}
+
+.bar-categories_card:nth-child(5) {
+background-image:var(--background-darkness),url(../img/bar-img/bottle_beer-min.webp)
+}
+
+.bar-categories_card:nth-child(6) {
+background-image:var(--background-darkness),url(../img/bar-img/zakuski-min.webp)
+}
+
+.bar-categories_card:nth-child(7) {
+background-image:var(--background-darkness),url(../img/bar-img/liquor-min.webp)
+}
+
+.bar-categories_card:nth-child(8) {
+background-image:var(--background-darkness),url(../img/bar-img/vine-min.webp)
+}
+
+.bar-categories_card:nth-child(9) {
+background-image:var(--background-darkness),url(../img/bar-img/cognac-min.webp)
+}
+
+.bar-categories_card:nth-child(10) {
+background-image:var(--background-darkness),url(../img/bar-img/vodka-min.webp)
+}
+
+.bar-categories_card:nth-child(11) {
+background-image:var(--background-darkness),url(../img/bar-img/tequila-min.webp)
+}
+
+.bar-categories_card:nth-child(12) {
+background-image:var(--background-darkness),url(../img/bar-img/rom-min.webp)
+}
+
+.food-menu {
+margin-top:182px;
+display:flex;
+flex-direction:column;
+align-items:center
+}
+
+.bar-menu {
+margin-top:182px;
+display:none;
+flex-direction:column;
+align-items:center
+}
+
+.food-menu_title,.bar-menu_title {
+width:90%;
+height:86px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+margin-top:150px;
+margin-bottom:150px
+}
+
+.food-menu_title .line {
+width:30%;
+height:7px;
+background:var(--primary-menu);
+transform:translateX(-400%);
+transition:transform .4s ease
+}
+
+.food-menu_title .line:nth-of-type(even) {
+transform:translateX(400%)
+}
+
+.food-menu_title .line.show {
+transform:translateX(0)
+}
+
+.food-menu_title h2,.bar-menu_title h2 {
+color:var(--text);
+font-family:'Caveat',cursive;
+font-size:100px;
+font-style:normal;
+font-weight:400;
+line-height:normal;
+text-align:center;
+margin:10px 0
+}
+
+.food-menu_name-price,.bar-menu_name-price {
+width:90%;
+display:flex;
+justify-content:start
+}
+
+.food-menu_name-price ul,.bar-menu_name-price ul {
+width:90%
+}
+
+.food-menu_name-price ul li,.bar-menu_name-price ul li {
+color:var(--text);
+font-family:'Caveat',cursive;
+font-size:80px;
+font-style:normal;
+font-weight:400;
+line-height:normal;
+margin-bottom:27px;
+display:flex;
+justify-content:space-between;
+align-items:center
+}
+
+.food-menu_name-price ul li span {
+color:var(--price)
+}
+
+.bar-menu_title .line {
+width:30%;
+height:7px;
+background:var(--primary-bar);
+transform:translateX(-400%);
+transition:transform .4s ease
+}
+
+.bar-menu_title .line:nth-of-type(even) {
+transform:translateX(400%)
+}
+
+.bar-menu_title .line.show {
+transform:translateX(0)
+}
+
+.bar-menu_name-price ul li span {
+color:var(--primary-bar)
+}
+
+.salads-con {
+width:100%;
+position:relative;
+display:flex;
+flex-direction:column;
+align-items:center
+}
+
+.bg-salad {
+position:absolute;
+right:0;
+top:20%;
+width:400px;
+height:700px;
+background-image:url(../img/menu-bg-img/salad-min.webp);
+opacity: 0.4;
+background-position:center;
+background-repeat:no-repeat;
+background-size:cover;
+z-index:-1
+}
+
+.soups-con {
+width:100%;
+position:relative;
+display:flex;
+flex-direction:column;
+align-items:center
+}
+
+.bg-soup {
+position:absolute;
+left:0;
+top:20%;
+width:500px;
+height:700px;
+background-image:url(../img/menu-bg-img/soup.webp);
+transform: rotate(180deg);
+background-position:center;
+background-repeat:no-repeat;
+background-size:cover;
+z-index:-1;
+opacity: 0.4;
+}
+
+.second-meal-con {
+width:100%;
+position:relative;
+display:flex;
+flex-direction:column;
+align-items:center
+}
+
+.bg-second-meal {
+position:absolute;
+right:0;
+top:20%;
+width:600px;
+height:400px;
+background-image:url(../img/menu-bg-img/fish-2-min.webp);
+background-position:center;
+background-repeat:no-repeat;
+background-size:cover;
+z-index:-1;
+opacity: 0.6;
+}
+
+.shashlyk-con {
+width:100%;
+position:relative;
+display:flex;
+flex-direction:column;
+align-items:center
+}
+
+.bg-shashlyk {
+position:absolute;
+right:0;
+top:40%;
+width:600px;
+height:500px;
+background-image:url(../img/menu-bg-img/shashlyk.webp);
+background-position:center;
+background-repeat:no-repeat;
+background-size:cover;
+opacity: 0.5;
+z-index:-1
+}
+
+.pizza-con {
+width:100%;
+position:relative;
+display:flex;
+flex-direction:column;
+align-items:center
+}
+
+.bg-pizza {
+position:absolute;
+left:0;
+top:40%;
+width:800px;
+height:800px;
+background-image:url(../img/menu-bg-img/pizza.webp);
+background-position:center;
+opacity: 0.5;
+background-repeat:no-repeat;
+background-size:cover;
+z-index:-1
+}
+
+.dessert-con {
+width:100%;
+position:relative;
+display:flex;
+flex-direction:column;
+align-items:center
+}
+
+.bg-dessert {
+position:absolute;
+left:30%;
+top:40%;
+width:600px;
+height:600px;
+background-image:url(../img/menu-bg-img/ice-cream-min.webp);
+background-position:center;
+opacity: 0.4;
+background-repeat:no-repeat;
+background-size:cover;
+z-index:-1
+}
+
+.tea-con {
+width:100%;
+position:relative;
+display:flex;
+flex-direction:column;
+align-items:center
+}
+
+.bg-tea {
+position:absolute;
+right:0;
+top:40%;
+width:600px;
+height:600px;
+background-image:url(../img/menu-bg-img/tea.svg);
+background-position:center;
+background-repeat:no-repeat;
+background-size:cover;
+z-index:-1;
+opacity: 0.5;
+}
+
+#myBtn {
+width:50px;
+height:50px;
+display:none;
+position:fixed;
+bottom:40px;
+right:40px;
+z-index:2;
+border:none;
+outline:none;
+cursor:pointer;
+border-radius:50%;
+background-color:var(--primary-menu)
+}
+
+#myBtn img {
+width:100%;
+height:100%;
+border-radius:50%;
+border:none;
+outline:none
+}
+
+@media (max-width: 920px) {
+.header {
+background-position:60%
+}
+
+.header_wrapper {
+width:100%;
+justify-content:center
+}
+
+.header_logo {
+height:300px
+}
+
+.header_logo h1 {
+font-size:80px
+}
+
+.btn {
+font-size:4em
+}
+
+.menu-categories,.bar-categories {
+margin-top:50px
+}
+
+.btn-box {
+width:70%;
+margin-top:40px
+}
+
+.menu-categories_card,.bar-categories_card {
+width:249px;
+height:280px
+}
+
+.bar-categories_card p {
+font-size:50px
+}
+
+.food-menu_title .line,.bar-menu_title .line {
+width:23%;
+height:5px
+}
+
+.food-menu_title,.bar-menu_title {
+margin-bottom:120px
+}
+
+.food-menu_name-price ul li,.bar-menu_name-price ul li {
+font-size:60px
+}
+
+.food-menu,.bar-menu {
+margin-top:20px
+}
+
+.bg-salad {
+width:300px;
+height:500px
+}
+
+.bg-soup {
+width:350px;
+height:500px
+}
+
+.bg-second-meal {
+width:500px;
+height:400px
+}
+
+.bg-shashlyk {
+right:0;
+top:30%;
+width:500px;
+height:400px
+}
+
+.bg-pizza {
+position:absolute;
+left:0;
+top:40%;
+width:650px;
+height:650px
+}
+
+.bg-dessert {
+width:450px;
+height:450px
+}
+
+.bg-tea {
+width:450px;
+height:450px
+}
+
+.c-square {
+width:70%;
+height:50%
+}
+
+.c-square_menu {
+font-size:80px
+}
+
+.c-square_title {
+font-size:52px
+}
+
+.l-circle {
+width:8rem;
+height:16rem
+}
+
+.r-circle {
+width:8rem;
+height:16rem
+}
+
+@keyframes MoveUpDown {
+0%,100% {
+bottom:0
+}
+
+50% {
+bottom:calc(100% - 16rem)
+}
+}
+
+@keyframes MoveUpDown2 {
+0%,100% {
+top:0
+}
+
+50% {
+top:calc(100% - 16rem)
+}
+}
+}
+
+@media (max-width: 650px) {
+.food-menu_title .line,.bar-menu_title .line {
+width:20%
+}
+
+.food-menu_title h2,.bar-menu_title h2 {
+font-size:80px
+}
+
+.food-menu_title,.bar-menu_title {
+margin-bottom:90px
+}
+
+.food-menu_name-price ul li,.bar-menu_name-price ul li {
+font-size:55px
+}
+
+.food-menu,.bar-menu {
+margin-top:10px
+}
+
+.bg-salad {
+width:300px;
+height:400px;
+top:30%
+}
+
+.bg-soup {
+width:300px;
+height:400px;
+top:30%
+}
+
+.bg-second-meal {
+top:40%;
+width:350px;
+height:250px
+}
+
+.bg-shashlyk {
+right:0;
+top:80%;
+width:350px;
+height:300px
+}
+
+.bg-pizza {
+position:absolute;
+left:0;
+top:40%;
+width:500px;
+height:500px
+}
+
+.bg-dessert {
+width:400px;
+height:400px
+}
+
+.bg-tea {
+width:400px;
+height:400px
+}
+
+.c-square {
+width:70%;
+height:40%
+}
+
+.c-square_menu {
+font-size:65px
+}
+
+.c-square_title {
+font-size:45px
+}
+
+.l-circle {
+width:6rem;
+height:12rem
+}
+
+.r-circle {
+width:6rem;
+height:12rem
+}
+
+@keyframes MoveUpDown {
+0%,100% {
+bottom:0
+}
+
+50% {
+bottom:calc(100% - 12rem)
+}
+}
+
+@keyframes MoveUpDown2 {
+0%,100% {
+top:0
+}
+
+50% {
+top:calc(100% - 12rem)
+}
+}
+}
+
+@media (max-width: 570px) {
+.header_logo h1 {
+font-size:60px
+}
+
+.btn-box {
+width:80%
+}
+
+.btn {
+width:30%;
+height:70px;
+font-size:3em
+}
+
+.menu-categories_card,.bar-categories_card {
+width:180px;
+height:200px;
+font-size:50px
+}
+
+.bar-categories_card p {
+font-size:40px
+}
+
+.food-menu_title h2,.bar-menu_title h2 {
+font-size:70px
+}
+
+.food-menu_title,.bar-menu_title {
+margin-bottom:75px
+}
+
+.food-menu_name-price ul li,.bar-menu_name-price ul li {
+font-size:50px
+}
+
+.bg-pizza {
+width:400px;
+height:400px
+}
+
+.bg-dessert {
+width:380px;
+height:400px
+}
+
+.c-square {
+width:70%;
+height:40%
+}
+
+.c-square_menu {
+font-size:50px
+}
+
+.c-square_title {
+font-size:35px
+}
+
+.l-circle {
+width:5rem;
+height:10rem
+}
+
+.r-circle {
+width:5rem;
+height:10rem
+}
+
+@keyframes MoveUpDown {
+0%,100% {
+bottom:0
+}
+
+50% {
+bottom:calc(100% - 10rem)
+}
+}
+
+@keyframes MoveUpDown2 {
+0%,100% {
+top:0
+}
+
+50% {
+top:calc(100% - 10rem)
+}
+}
+}
+
+@media (max-width: 426px) {
+.header {
+width:100%;
+height:300px
+}
+
+.header_wrapper {
+display:flex;
+justify-content:end
+}
+
+.header_logo {
+width:134px;
+height:110px
+}
+
+.header_logo img {
+width:95%;
+height:49%
+}
+
+.header_logo h1 {
+font-size:25px
+}
+
+.header_logo h2 {
+font-size:22px
+}
+
+.header_wrapper {
+width:50%
+}
+
+.btn {
+width:45%;
+height:50px;
+font-size:2.5em
+}
+
+.menu-categories_card,.bar-categories_card {
+width:140px;
+height:150px;
+font-size:40px
+}
+
+.menu-categories,.bar-categories {
+row-gap:30px;
+column-gap:30px
+}
+
+.bar-categories_card p {
+font-size:30px
+}
+
+.food-menu_title h2,.bar-menu_title h2 {
+font-size:50px
+}
+
+.food-menu_title .line,.bar-menu_title .line {
+width:22%
+}
+
+.food-menu_title,.bar-menu_title {
+margin-bottom:40px
+}
+
+.food-menu_name-price ul li,.bar-menu_name-price ul li {
+font-size:40px
+}
+
+.food-menu,.bar-menu {
+margin-top:40px
+}
+
+.food-menu_title,.bar-menu_title {
+margin-top:50px
+}
+
+.bg-soup {
+width:200px;
+height:300px;
+top:30%
+}
+
+.bg-second-meal {
+width:280px;
+height:200px;
+top:30%
+}
+
+.bg-shashlyk {
+right:0;
+top:20%;
+width:250px;
+height:200px
+}
+
+.bg-pizza {
+width:300px;
+height:300px
+}
+
+.bg-dessert {
+left:0;
+width:330px;
+height:370px
+}
+
+.bg-tea {
+width:350px;
+height:350px
+}
+
+#myBtn {
+width:40px;
+height:40px;
+bottom:20px;
+right:20px
+}
+
+.c-square {
+width:60%;
+height:80%
+}
+
+.c-square_menu {
+font-size:30px
+}
+
+.c-square_title {
+font-size:25px
+}
+}
+
+@media (max-width: 376px) {
+.food-menu_title,.bar-menu_title {
+margin-bottom:30px
+}
+
+.food-menu_name-price ul li,.bar-menu_name-price ul li {
+font-size:3.3rem
+}
+
+.food-menu,.bar-menu {
+margin-top:30px
+}
+
+.food-menu_title,.bar-menu_title {
+margin-top:30px
+}
+
+.bg-salad {
+width:250px;
+height:350px
+}
+
+.bg-shashlyk {
+right:0;
+top:40%;
+width:220px;
+height:180px
+}
+
+.bg-dessert {
+width:300px;
+height:330px
+}
+
+.bg-tea {
+width:320px;
+height:320px
+}
+
+#myBtn {
+width:35px;
+height:35px;
+bottom:20px;
+right:20px
+}
+
+.c-square {
+width:60%;
+height:80%
+}
+
+.c-square_menu {
+font-size:30px
+}
+
+.c-square_title {
+font-size:25px
+}
+}
+
+@media (max-width: 320px) {
+.btn {
+font-size:30px
+}
+
+.menu-categories_card,.bar-categories_card {
+width:130px;
+height:140px;
+font-size:35px
+}
+
+.bar-categories_card p {
+font-size:27px
+}
+
+.food-menu_title h2,.bar-menu_title h2 {
+font-size:40px
+}
+
+.food-menu_title .line,.bar-menu_title .line {
+width:23%
+}
+
+.food-menu_name-price ul li,.bar-menu_name-price ul li {
+font-size:3rem
+}
+
+.bg-salad {
+width:200px;
+height:300px
+}
+
+.bg-second-meal {
+width:200px;
+height:150px
+}
+
+.bg-pizza {
+width:250px;
+height:250px
+}
+
+.bg-dessert {
+width:270px;
+height:290px
+}
+
+.bg-tea {
+width:250px;
+height:250px
+}
+
+#myBtn {
+width:35px;
+height:35px;
+bottom:15px;
+right:15px
+}
+
+.c-square {
+width:60%;
+height:80%
+}
+
+.c-square_menu {
+font-size:30px
+}
+
+.c-square_title {
+font-size:22px
+}
+}
+@media (max-width: 240px) {
+.header_logo h1{
+font-size: 1.6rem;
+}
+}
